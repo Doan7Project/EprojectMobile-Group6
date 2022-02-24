@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/categories.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <title>index</title>
+</head>
+
+<body ng-app="myApp">
+    <div class="body-margin">
+        <header class="header-top">
+            <div class="headerbox">
+                <div class="menuleft">
+                    <div class="logo">
+                        <img src="../images/logomobile.png" alt="">
+                    </div>
+                </div>
+
+                <div class="menuright">
+                    <div class="menuicon">
+                        <a class="cta" href=""><i class="fad fa-shopping-cart"></i></a>
+                    </div>
+                    <div>
+                        <a class="cta" href="" title="Map"><i class="fal fa-map-marked"></i></a>
+                    </div>
+                    <div class="menuicon">
+                        <a class="cta" href=""><i class="fal fa-bell"></i></a>
+                    </div>
+                    <!-- <div class="menuicon">
+                    <a class="cta" href=""><i id="signin" class="fal fa-user-alt"></i></a>
+                </div> -->
+                    <span>|</span>
+                    <div class="signup">
+                        <i class="fal fa-user-plus"></i></i><input type="button" class="btn-su-lg" value="Register">
+                    </div>
+                    <span>|</span>
+                    <div class="signup">
+                        <i class="fal fa-sign-in-alt"></i><input type="button" class="btn-su-lg" value="Login">
+                    </div>
+                    <span>|</span>
+                    <div class="signup">
+                        <i class="fas fa-phone-volume"></i>
+                        <span>Hotline: 0981 137 177</span>
+                    </div>
+                    <!-- <div>
+                        <select class="language" name="" id="">
+                        <option value="1">Language</option>
+                    </select>
+                    </div> -->
+                </div>
+
+            </div>
+
+        </header>
+        <!-- Create promotion picture -->
+
+
+
+
+        <!-- create menubar -->
+        <header class="menubar">
+            <nav>
+                <input type="checkbox" id="checkbx">
+                <label for="checkbx">
+                    <span id="txtbtn" class="fas fa-bars"></span>
+                        </label>
+                <ul>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+
+                    <li class="drop-down">
+                        <a href="">Brands<i class="fas fa-caret-down"></i></a>
+                        <ul class="m-drop-down">
+                            <li>
+                                <a href="#!brand" ng-click="myFiter.brandName = ''">Mobile Brands</a>
+                            </li>
+                            <li>
+                                <a href="#!samsung" ng-click="myFiter.brandName = 'samsung'">Samsung</a>
+                            </li>
+                            <li>
+                                <a href="#!apple" ng-click="myFiter.brandName = 'apple'">Apple</a>
+                            </li>
+                            <li>
+                                <a href="#!google" ng-click="myFiter.brandName = 'google'">Google</a>
+                            </li>
+                            <li>
+                                <a href="#!motorola" ng-click="myFiter.brandName = 'motorola'">Motorola</a>
+                            </li>
+                            <li>
+                                <a href="#!nokia" ng-click="myFiter.brandName = 'nokia'">Nokia</a>
+                            </li>
+
+                            <li>
+                                <a href="#!oppo" ng-click="myFiter.brandName = 'oppo'">Oppo</a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#">Services</a>
+                    </li>
+                    <li class="drop-down">
+                        <a href="#">Branchs<i class="fas fa-caret-down"></i></a>
+                        <ul class="m-drop-down">
+                            <li class="brname">
+                                <a href="">Viet Nam</a>
+                            </li>
+                            <li class="brname">
+                                <a href="">Japan</a>
+                            </li>
+                            <li class="brname">
+                                <a href="">Usa</a>
+                            </li>
+                            <li class="brname">
+                                <a href="">Korea</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Feedback</a>
+                    </li>
+                    <li>
+                        <a href="#">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact Us</a>
+                    </li>
+                    <li>
+                        <a href="#">FAQ</a>
+                    </li>
+                </ul>
+                <div class="iconadver">
+                    <div class="elipicon">
+                        <a href="" class="icon"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    <div class="elipicon">
+                        <a href="" class="icon"><i class="fab fa-facebook"></i></a>
+                    </div>
+                    <div class="elipicon">
+                        <a href="" class="icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="elipicon">
+                        <a href="" class="icon"><i class="fab fa-google"></i></a>
+                    </div>
+                </div>
+            </nav>
+
+        </header>
+        <!-- Menu hide scopdown -->
+        <header id="menubar-cropdow">
+            <nav>
+                <input type="checkbox" id="checkbx">
+                <label for="checkbx">
+                    <span id="txtbtn" class="fas fa-bars"></span>
+                        </label>
+                <ul>
+                    <li>
+                        <a href="#/">Home</a>
+                    </li>
+
+                    <li class="drop-down">
+                        <a href="#!brand">Mobile Brands<i class="fas fa-caret-down"></i></a>
+                        <ul class="m-drop-down">
+                            <li>
+                                <a href="#">Samsung</a>
+                            </li>
+                            <li>
+                                <a href="#">Apple</a>
+                            </li>
+                            <li>
+                                <a href="#">Google</a>
+                            </li>
+                            <li>
+                                <a href="#">Motorola</a>
+                            </li>
+                            <li>
+                                <a href="#">Nokia</a>
+                            </li>
+
+                            <li>
+                                <a href="#">Oppo</a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#">Services</a>
+                    </li>
+                    <li class="drop-down">
+                        <a href="#">Branchs<i class="fas fa-caret-down"></i></a>
+                        <ul class="m-drop-down">
+                            <li class="brname">
+                                <a href="">Viet Nam</a>
+                            </li>
+                            <li class="brname">
+                                <a href="">Japan</a>
+                            </li>
+                            <li class="brname">
+                                <a href="">Usa</a>
+                            </li>
+                            <li class="brname">
+                                <a href="">Korea</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Feedback</a>
+                    </li>
+                    <li>
+                        <a href="#">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact Us</a>
+                    </li>
+                    <li>
+                        <a href="#">FAQ</a>
+                    </li>
+                </ul>
+                <div class="iconadver">
+                    <div class="elipicon">
+                        <a href="" class="icon"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    <div class="elipicon">
+                        <a href="" class="icon"><i class="fab fa-facebook"></i></a>
+                    </div>
+                    <div class="elipicon">
+                        <a href="" class="icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="elipicon">
+                        <a href="" class="icon"><i class="fab fa-google"></i></a>
+                    </div>
+                </div>
+            </nav>
+
+
+        </header>
+        <!-- view single page -->
+        <section class="view">
+            <div ng-view></div>
+        </section>
+        <hr>
+        <button onclick="topFunction()" id="topbtn"><i class="fal fa-arrow-to-top"></i></button>
+        <footer class="footer">
+
+            <div class="colfooter">
+                <p>Group: 06 - T1.2110.E1</p>
+                <p>Email: cellinfo@gmail.com</p>
+                <p>Tel: 0981 137 177 - Fax: 0981 091 991</p>
+                <p>Address: 590 Cach Mang Thang Tam, District 3, HCM City</p>
+            </div>
+            <div class="colfooter">
+                <hr style="background-color: gray;">
+                <span class="textmodel">THE BEST FOR YOUR CHOOSING</span>
+                <br>
+                <span><i class="fas fa-star"></i></span>
+                <span><i class="fas fa-star"></i></span>
+                <span><i class="fas fa-star"></i></span>
+                <span><i class="fas fa-star"></i></span>
+                <span><i class="fas fa-star"></i></span>
+                <hr style="background-color: gray;">
+
+            </div>
+
+            <div class="colfooter">
+                <div class="box-icon">
+                    <a href="" class="icon-footer"><i class="fab fa-twitter"></i></a>
+                    <a href="" class="icon-footer"><i class="fab fa-facebook"></i></a>
+                    <a href="" class="icon-footer"><i class="fab fa-instagram"></i></a>
+                    <a href="" class="icon-footer"><i class="fab fa-google"></i></a>
+                    <a href="" class="icon-footer"><i class="fab fa-youtube"></i></a>
+                    <br>
+                    <a href=""><i class="fab fa-cc-visa"></i></a>
+                    <a href=""><i class="fab fa-cc-mastercard"></i></a>
+                    <a href=""><i class="fab fa-cc-diners-club"></i></a>
+                    <a href=""><i class="fab fa-cc-paypal"></i></a>
+                    <a href=""><i class="fab fa-cc-amazon-pay"></i></a>
+                    <a href=""><i class="fab fa-cc-am"></i></a>
+                    <p style="text-align: center;">PAYMENT METHOD</p>
+                </div>
+                <!-- <p for="">Payment Methods</p> -->
+
+
+            </div>
+
+
+        </footer>
+    </div>
+
+    <script src="../js/main.js ">
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+.content-body {
+    padding: 10px;
+    background-color: white;
+}
+
+.body-margin {
+    background-color: rgba(250, 248, 248, 0.1);
+}
+
+.brand-mobile {
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    width: 100%;
+    border-top: 1px solid rgb(198, 199, 199, 0.3);
+    border-bottom: 1px solid rgb(198, 199, 199, 0.3);
+    padding: 20px;
+}
+
+.mobile-detail {
+    width: 100%;
+    height: 100%;
+    text-align: left;
+}
+
+.mobile-detail .btn {
+    margin: 0px 1px;
+    border: none;
+    background-color: white;
+    box-shadow: 0px 2px 4px gray;
+    width: 100px;
+    font-size: 14px;
+    color: gray;
+    transition: all linear 0.3s;
+    outline: none;
+}
+
+.mobile-detail .btn:focus {
+    color: rgb(255, 255, 255);
+    background-color: rgb(4, 190, 134);
+    border: none;
+    transition: all linear 0.3s;
+}
+
+.mobile-detail .btn:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(4, 190, 134);
+    border: none;
+    transition: all linear 0.3s;
+}
+
+.fcsearch {
+    /* margin-right: 7em; */
+    display: inline-flex;
+    height: 28px;
+    width: 60%;
+    background-color: rgb(233, 233, 233);
+    border-radius: 6px;
+    transition: all 0.4s ease 0s;
+    border: 1.5px solid rgb(4, 190, 134);
+    text-align: left;
+}
+
+.fcsearch:hover {
+    box-shadow: 0px 0px 5px rgb(4, 190, 134, 0.5);
+}
+
+.fcsearch .txtsearch {
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-radius: 5px 0px 0px 5px;
+    outline: none;
+    padding: 0px 10px;
+    font-size: 12px;
+}
+
+.fcsearch .icon {
+    height: 100%;
+    width: 80px;
+    line-height: 24px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0px 5px 5px 0px;
+    color: rgb(96, 214, 0);
+    cursor: pointer;
+    transition: all 0.4s ease 0s;
+}
+
+.selbox {
+    font-size: 12px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: rgb(51, 51, 51);
+}
+
+
+/* Content body */
+
+.content-body {
+    width: 100%;
+    text-align: center;
+    font-family: monospace;
+}
+
+.textmodel {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(0, 197, 154);
+}
+
+.content-body span i {
+    color: gold;
+}
+
+
+/* body-content-product and control */
+
+.body-contents {
+    padding-top: 20px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+
+/* Control table */
+
+.control-left {
+    box-shadow: 0px 2px 3px rgb(221, 221, 221);
+    position: relative;
+    height: 100%;
+    width: 20%;
+    border: 1px solid rgb(247, 247, 247);
+}
+
+.control-table {
+    padding: 20px 20px 2px 20px;
+    display: block;
+    font-size: 12px;
+    align-items: center;
+}
+
+.control-table div {
+    padding-top: 5px;
+}
+
+.control-table div label {
+    width: 100%;
+    font-size: 14px;
+    border-bottom: 1px solid rgb(207, 207, 207);
+    /* background-color: rgba(0, 207, 173); */
+    color: rgb(0, 0, 0);
+    font-family: serif;
+    font-weight: bold;
+}
+
+#unselect {
+    display: none;
+}
+
+
+/* right product */
+
+.brand-name {
+    width: 100%;
+    height: 40px;
+    margin: 0 15px 0 10px;
+    border-bottom: 1px solid rgb(199, 199, 199);
+}
+
+.right-section {
+    width: 80%;
+}
+
+.brand-product {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+
+/* each product mobile */
+
+.product {
+    width: 240px;
+    transition: all linear 0.4s;
+    cursor: pointer;
+    position: relative;
+    margin: 10px;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+}
+
+.product:hover {
+    box-shadow: 0px 5px 10px rgb(94, 94, 94);
+    transform: translateY(-5px);
+    transition: all linear 0.4s;
+}
+
+.product-img img {
+    width: 100%;
+    transition: all linear 0.4s;
+}
+
+.product-content {
+    border: 1px solid rgb(18, 194, 164);
+}
+
+.product-btn {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    position: relative;
+    transition: all linear 0.4s;
+    opacity: 0;
+}
+
+.product-btn button {
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    height: 28px;
+    font-family: cambria;
+    border: none;
+    margin: 0 0px 0 0px;
+}
+
+.product-btn .add-cart {
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    transition: all linear 0.4s;
+}
+
+.product-btn .add-cart:hover {
+    color: white;
+    background-color: rgb(18, 194, 164);
+    transition: all linear 0.4s;
+    box-shadow: 0px 3px 5px rgb(185, 185, 185);
+}
+
+.product-btn .add-cart span i {
+    padding-left: 6px;
+}
+
+.product-btn .by-now {
+    background-color: white;
+    transition: all linear 0.4s;
+}
+
+.product-btn .by-now:hover {
+    background-color: rgb(18, 194, 164);
+    transition: all linear 0.4s;
+    color: white;
+    box-shadow: 0px 3px 5px rgb(185, 185, 185);
+}
+
+.product-btn .by-now span i {
+    padding-left: 6px;
+}
+
+.product:hover .product-btn {
+    opacity: 1;
+}
+
+.product-info {
+    padding-top: 14px;
+    text-align: center;
+    font-family: serif;
+    color: white;
+    background-color: rgb(13, 151, 110);
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+}
+
+
+/* product name */
+
+.product-name {
+    width: 100%;
+    position: relative;
+}
+
+.product-name p {
+    padding: 0px 20px 0px 20px;
+    margin: 0;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+/* price product */
+
+.price {
+    display: flex;
+    position: relative;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.price div {
+    width: 100%;
+    /* padding: 0px 20px 0px 20px; */
+}
+
+.price p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.price .price-real {
+    text-decoration: line-through;
+    text-align: left;
+    width: 100%;
+    font-variant: small-caps;
+    color: rgb(49, 5, 5);
+    margin: 2px;
+    font-size: 12px;
+}
+
+.price .price-discount {
+    text-align: right;
+    color: rgb(255, 255, 255);
+    width: 100%;
+}
+
+.stars {
+    position: absolute;
+    width: 100%;
+    top: 92%;
+}
+
+.stars i {
+    font-size: 9px;
+    padding: 0;
+    color: rgb(255, 255, 255);
+}
+
+
+/* sales off */
+
+.info .views {
+    border: none;
+    color: rgb(192, 192, 192);
+    display: inline-block;
+    padding: 0.5em;
+    position: absolute;
+    font-size: 10px;
+    font-family: cursive;
+    background-color: transparent;
+    top: 0;
+    left: 3px;
+    opacity: 0;
+    transition: all linear 0.4s;
+}
+
+.info .views:hover {
+    color: black;
+    transition: all linear 0.4s;
+}
+
+.product:hover .views {
+    font-weight: bold;
+    opacity: 1;
+    transition: all linear 0.4s;
+}
+
+
+/* .off-info .sm-off-info {
+    background-color: rgb(87, 240, 194);
+    color: white;
+    display: inline-block;
+    padding: 0.5em;
+    position: absolute;
+    font-size: 10px;
+    font-family: cursive;
+    top: 0;
+    left: 0;
+    writing-mode: vertical-lr;
+    letter-spacing: 3px;
+    cursor: pointer;
+} */
+
+.gift-info .sm-gift-info {
+    background-color: rgb(241, 68, 24);
+    color: white;
+    display: inline-block;
+    padding: 0.5em;
+    position: absolute;
+    font-size: 10px;
+    font-family: cursive;
+    top: 0;
+    right: 0;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+
+.compare {
+    position: absolute;
+    width: 100%;
+    bottom: 50%;
+    opacity: 0;
+    transition: all linear 0.4s;
+}
+
+.compare button {
+    border: none;
+    font-size: 12px;
+    padding: 5px;
+    width: 100%;
+    height: 30px;
+    color: white;
+    font-weight: bold;
+    background-color: rgba(190, 202, 202, 0.1);
+    transition: all linear 0.4s;
+}
+
+.compare button:hover {
+    box-shadow: 0px 3px 10px rgb(19, 18, 18);
+    background-color: rgb(44, 197, 182);
+    transition: all linear 0.4s;
+}
+
+.product:hover .compare {
+    opacity: 1;
+}

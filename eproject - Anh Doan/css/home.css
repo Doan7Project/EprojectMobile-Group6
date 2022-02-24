@@ -1,0 +1,265 @@
+/* content inside picture */
+
+.text-promotion {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text-promotion p {
+    color: white;
+}
+
+.font-promotion {
+    color: rgb(243, 82, 23);
+    text-transform: uppercase;
+    font-family: cursive;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgb(32, 31, 31);
+}
+
+.text-promotion p {
+    font-family: cursive;
+    color: rgb(255, 255, 255);
+    font-size: large;
+}
+
+.inputsave {
+    position: absolute;
+    top: 60%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.inputsave input {
+    border-radius: 2em;
+    font-weight: bold;
+    width: 120px;
+    height: 35px;
+    border: none;
+    background-color: rgb(236, 19, 56, 0.3);
+    color: white;
+    transition: all linear 0.3s;
+}
+
+.inputsave input:hover {
+    background-color: rgb(236, 19, 56);
+    transition: all linear 0.3s;
+}
+
+
+/* -----------Create promotion picture--------------- */
+
+.slides input {
+    display: none;
+}
+
+.slider {
+    background-color: rgba(15, 15, 15);
+    overflow: hidden;
+    width: 100%;
+    height: 650px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.slides {
+    width: 500%;
+    height: 650px;
+    display: flex;
+}
+
+.slide {
+    width: 20%;
+    transition: 2s;
+}
+
+.slide img {
+    width: 100%;
+    height: 650px;
+    box-shadow: 2px 0px 4px black;
+}
+
+.navigation-manual {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    top: 90%;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid rgb(219, 219, 219);
+    padding: 3px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 1s;
+    z-index: 1;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 30px;
+}
+
+.manual-btn:hover {
+    background-color: rgb(177, 177, 177);
+}
+
+#radio1:checked~.first {
+    margin-left: 0;
+}
+
+#radio2:checked~.first {
+    margin-left: -20%;
+}
+
+#radio3:checked~.first {
+    margin-left: -40%;
+}
+
+#radio4:checked~.first {
+    margin-left: -60%;
+}
+
+
+/* slide auto */
+
+.navigation-auto {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    top: 100%;
+    justify-content: center;
+}
+
+.navigation-auto div {
+    border: 2px solid rgb(51, 51, 51);
+    padding: 3px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 30px;
+}
+
+#radio1:checked~.navigation-auto .auto-btn1 {
+    background-color: rgb(216, 216, 216);
+}
+
+#radio2:checked~.navigation-auto .auto-btn2 {
+    background-color: rgb(216, 216, 216);
+}
+
+#radio3:checked~.navigation-auto .auto-btn3 {
+    background-color: rgb(216, 216, 216);
+}
+
+#radio4:checked~.navigation-auto .auto-btn4 {
+    background-color: rgb(216, 216, 216);
+}
+
+
+/* Content body */
+
+.content-body {
+    width: 100%;
+    text-align: center;
+    font-family: monospace;
+}
+
+.textmodel {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.body-content {
+    border: 1px solid rgb(255, 212, 205);
+    /* background: radial-gradient(circle, #56ab2f, #a8e063 150px); */
+    /* background: radial-gradient( circle at top right, #fffbfb, #ffffff); */
+    width: 100%;
+    height: 60vh;
+    position: relative;
+    display: flex;
+    padding: 10px;
+    font-family: cambria;
+    margin: 10px auto;
+}
+
+.content-body {
+    width: 100%;
+    text-align: center;
+    font-family: cambria;
+}
+
+.textmodel {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.content-body p {
+    text-align: justify;
+    font-size: 15px;
+    color: gray;
+    padding: 0px 50px;
+    font-family: cambria;
+}
+
+.content-body p span {
+    color: rgb(199, 3, 94);
+    font-weight: bold;
+}
+
+
+/* Specail product view */
+
+.content-left {
+    width: 100%;
+    height: 100%;
+    padding: 10px 30px;
+    text-align: justify;
+}
+
+.content-right {
+    padding: 10px 30px;
+    width: 100%;
+    height: 100%;
+}
+
+.content-right img {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 0px 6px rgb(58, 58, 58);
+}
+
+.btnview input {
+    border: none;
+    width: 120px;
+    height: 30px;
+    border-radius: 2em;
+    background-color: rgb(241, 98, 153);
+    color: rgb(255, 255, 255);
+    transition: all linear 0.3s;
+}
+
+.btnview input:hover {
+    background-color: rgba(231, 38, 112);
+    transition: all linear 0.3s;
+}
+
+.body-content .content-right .btnview-pic .bntall:hover {
+    background-color: rgb(201, 5, 80);
+}
+
+.view {
+    transition: all linear 0.6s;
+}
+
+@media only screen and (max-width:1050px) {
+    .body-content {
+        display: inline-table;
+    }
+}

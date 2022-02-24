@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
+    <title>Document</title>
+    <style>
+        body {
+            background-image: linear-gradient(to bottom right, rgba(98, 233, 98, 0.2), rgba(223, 247, 9, 0.5));
+        }
+        
+        .small-img-group {
+            display: flex;
+            justify-content: space-between;
+            transition: all linear 0.2s;
+            border-bottom: 3px solid white;
+            border-top: 0.5px solid white;
+        }
+        
+        .small-img-group:hover {
+            background-image: linear-gradient(to bottom right, rgba(162, 250, 162, 0.2), rgba(227, 240, 116, 0.5));
+            box-shadow: 0px 4px 6px rgb(66, 66, 66);
+            transition: all linear 0.4s;
+            border: none;
+        }
+        
+        .small-img-col {
+            cursor: pointer;
+            transition: all linear 0.4s;
+        }
+        
+        .small-img-col:hover {
+            transform: translateY(-3px);
+            transition: all linear 0.4s;
+        }
+        
+        .btn-gb {
+            width: 90px;
+            border: 1px solid rgb(167, 167, 167);
+            background-color: transparent;
+            border-radius: 0.5em;
+            color: gray;
+            transition: all linear 0.3s;
+        }
+        
+        .btn-gb:hover {
+            background-color: rgb(206, 7, 139);
+            color: white;
+            border: none;
+            transition: all linear 0.3s;
+        }
+        
+        .btn-gb:focus {
+            background-color: rgb(206, 7, 139);
+            color: white;
+            border: none;
+        }
+        
+        .btn-add {
+            width: 120px;
+            background-color: rgb(182, 14, 117);
+            color: rgb(255, 255, 255);
+            height: 35px;
+            border: none;
+            border-radius: 0.5em;
+            margin: 10px 0px;
+            transition: all linear 0.3s;
+        }
+        
+        .btn-add:hover {
+            background-color: rgb(182, 14, 117, 0.8);
+            color: rgb(255, 255, 255);
+            transition: all linear 0.3s;
+        }
+        
+        .btn-buy {
+            width: 120px;
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            height: 35px;
+            border: 1px solid gray;
+            border-radius: 0.5em;
+            margin: 10px 0px;
+            transition: all linear 0.3s;
+        }
+        
+        .btn-buy:hover {
+            background-color: black;
+            color: white;
+            transition: all linear 0.3s;
+        }
+        
+        .bolder {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container Sproduct my-4 pt-2">
+
+        <div class="row ">
+
+            <div class="product-show col-lg-5 col-md-12 col-12">
+                <div>
+                    <h5 style="text-align: center;">PHONE DETAILS INFORMATION</h5>
+                </div>
+                <img class="img-fluid w-100 pt-1" src="../images/iphone13.png" alt="" id="mainImg">
+
+                <div class="small-img-group">
+                    <div class="small-img-col">
+                        <img src="../images/iphone11.png" width="100%" class="small-img" alt="">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="../images/iphone1fa-stack-2x.png" width="100%" class="small-img" alt="">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="../images/iphone13.png" width="100%" class="small-img" alt="">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="../images/iphone13pro.png" width="100%" class="small-img" alt="">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="../images/iphone12.png" width="100%" class="small-img" alt="">
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col-lg-6 col-md-12 col-12">
+
+                <h6>APPLE | IPHONE</h6>
+                <H3>Apple iPhone 13 Pro Max</H3>
+                <H2>$540.00</H2>
+                <button class="btn-gb">64Gb</button>
+                <button class="btn-gb">128Gb</button>
+                <button class="btn-gb">256Gb</button>
+                <button class="btn-gb">512Gb</button>
+                <br>
+                <button class="btn-add">Add to cart</button>
+                <button class="btn-buy">Buy Now</button>
+                <h5>Product Details</h5>
+                <p><span class="bolder">Body:</span> 160.8x78.1x7.7mm, 240g; Glass front (Gorilla Glass), glass back (Gorilla Glass), stainless steel frame; IP68 dust/water resistant (up to 6m for 30 mins), Apple Pay (Visa, MasterCard, AMEX certified).</p>
+                <p><span class="bolder">Display: </span>6.70" Super Retina XDR OLED, 120Hz, HDR10, Dolby Vision, 1000 nits (typ), 1200 nits (peak), 1284x2778px resolution, 19.47:9 aspect ratio, 458ppi; Wide color gamut, True-tone.</p>
+                <p>Chipset: Apple A15 Bionic (5 nm): Hexa-core (2x3.22 GHz Avalanche + 4xX.X GHz Blizzard); Apple GPU (5-core graphics).</p>
+                <p><span class="bolder">Memory:</span> 128GB 6GB RAM, 256GB 6GB RAM, 512GB 6GB RAM, 1TB; NVMe.</p>
+                <p><span class="bolder">OS/Software:</span> iOS 15.</p>
+                <p><span class="bolder">Rear camera:</span> Wide (main): 12 MP, f/1.5, 26mm, 1.9µm, dual pixel PDAF, sensor-shift OIS; Telephoto: 12 MP, f/2.8, 77mm, PDAF, OIS, 3x optical zoom; Ultra wide angle: 12 MP, f/1.8, 13mm, 120˚, PDAF; Depth: TOF
+                    3D LiDAR scanner.</p>
+                <p><span class="bolder">Front camera:</span> Wide (main): 12 MP, f/2.2, 23mm, 1/3.6"; Depth: SL 3D.</p>
+                <p><span class="bolder">Video capture:</span> Rear camera: 4K@24/30/60fps, 1080p@30/60/120/240fps, 10‑bit HDR, Dolby Vision HDR (up to 60fps), ProRes, Cinematic mode, stereo sound rec; Front camera: 4K@24/25/30/60fps, 1080p@30/60/120fps,
+                    gyro-EIS.
+                </p>
+                <p><span class="bolder">Battery:</span> 4352mAh; Fast charging 27W, 50% in 30 min (advertised), USB Power Delivery 2.0, MagSafe wireless charging 15W, Qi magnetic fast wireless charging 7.5W.</p>
+                <p><span class="bolder">Misc:</span> Face ID, accelerometer, gyro, proximity, compass, barometer; NFC; Siri natural language commands and dictation, Ultra Wideband (UWB) support.</p>
+                <p>
+                    <h6>Versions: A2638 (International); A2483 (USA); A2636 (Canada, Japan); A2639 (China, Hong Kong); A2640 (Russia)</h6>
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+
+    <script>
+        var MainImg = document.getElementById('mainImg');
+        var smallImg = document.getElementsByClassName('small-img');
+        smallImg[0].onclick = function() {
+            MainImg.src = smallImg[0].src;
+        }
+        smallImg[1].onclick = function() {
+            MainImg.src = smallImg[1].src;
+        }
+        smallImg[2].onclick = function() {
+            MainImg.src = smallImg[2].src;
+        }
+        smallImg[3].onclick = function() {
+            MainImg.src = smallImg[3].src;
+        }
+        smallImg[4].onclick = function() {
+            MainImg.src = smallImg[4].src;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+hr {
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.headerbox {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: 90%;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.headerbox .menuleft {
+    width: 100%;
+}
+
+.headerbox .menuright {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    font-size: 13px;
+}
+
+.logo img {
+    width: 30%;
+    height: auto;
+}
+
+.signup {
+    display: inline-flex;
+    align-items: center;
+    padding: 0px 5px 0px 5px;
+}
+
+.signup i {
+    padding: 0;
+    margin: 0;
+}
+
+.signup .btn-su-lg {
+    border: none;
+    color: rgb(66, 66, 66);
+    transition: all 0.4s ease 0s;
+    background-color: transparent;
+}
+
+.signup span {
+    color: rgb(228, 30, 4);
+    padding: 0px 5px;
+}
+
+.signup .btn-su-lg:hover {
+    color: rgb(218, 0, 90);
+}
+
+.menuicon {
+    padding: 0px 5px 0px 5px;
+}
+
+.cta {
+    color: black;
+    transition: all 0.4s ease 0s;
+}
+
+.cta:hover {
+    color: rgb(218, 0, 90);
+}
+
+.btnlogin {
+    width: 90px;
+    height: 35px;
+    border: none;
+    background-color: white;
+    color: rgb(7, 7, 7);
+    transition: all 0.4s ease 0s;
+}
+
+.btnlogin:hover {
+    color: rgb(218, 0, 90);
+}
+
+
+/* reponsive menubar */
+
+@media only screen and (max-width:1200px) {
+    .headerbox .menuleft {
+        width: 60%;
+    }
+    .headerbox .menuright {
+        font-size: 11px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        text-align: right;
+    }
+}
+
+@media only screen and (max-width:790px) {
+    .headerbox .menuleft {
+        display: none;
+    }
+    .headerbox .menuright {
+        justify-content: center;
+        font-size: 9px;
+    }
+}
+
+
+/* .................Create menubar............. */
+
+.menubar {
+    /* border: 1px solid turquoise; */
+    position: relative;
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    margin: 0px auto;
+    /* background-color: #222; */
+    background-color: rgb(204, 0, 68);
+    text-align: center;
+    justify-content: space-between;
+}
+
+#checkbx {
+    display: none;
+}
+
+#txtbtn {
+    font-size: 15px;
+    display: none;
+    color: white;
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.menubar nav ul a {
+    text-decoration: none;
+    display: block;
+    color: rgb(190, 190, 190);
+    transition: all 0.4s ease 0s;
+    padding: 0px 17px;
+    font-size: 15px;
+    /* background-color: #222; */
+}
+
+nav ul li a:hover {
+    color: rgba(255, 255, 255);
+    transition: all 0.5s ease 0s;
+}
+
+
+/* brand mennu */
+
+nav ul ul {
+    position: absolute;
+    background-color: rgb(204, 0, 68);
+    opacity: 0;
+    top: 65px;
+    visibility: hidden;
+    width: 15%;
+    margin-left: 1em;
+    padding: 0px 15px 17px;
+}
+
+nav ul li:hover>ul {
+    display: block;
+    transition: all 0.7s ease;
+    top: 42px;
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 2em;
+}
+
+nav ul ul li {
+    padding-top: 18px;
+}
+
+nav ul ul a {
+    min-width: 130px;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+i {
+    padding: 0px 5px;
+}
+
+
+/* menu scopdown */
+
+#menubar-cropdow {
+    position: fixed;
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    top: -100px;
+    width: 100%;
+    margin: 0px auto;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+#menubar-cropdow nav ul a {
+    text-decoration: none;
+    display: block;
+    color: rgb(0, 0, 0);
+    transition: all 0.4s ease 0s;
+    padding: 0px 15px;
+    font-size: 15px;
+    /* background-color: #222; */
+}
+
+#menubar-cropdow nav ul ul {
+    position: absolutergb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    opacity: 0;
+    top: 65px;
+    visibility: hidden;
+    width: 15%;
+    margin-left: 1em;
+    padding: 0px 15px 12px;
+    font-size: 10px;
+}
+
+#menubar-cropdow nav ul li:hover>ul {
+    display: block;
+    transition: all 0.7s ease;
+    top: 42px;
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 2em;
+}
+
+#menubar-cropdow nav ul li a:hover {
+    color: rgb(143, 143, 143);
+    transition: all 0.5s ease 0s;
+}
+
+#menubar-cropdow .elipicon a i {
+    color: rgb(0, 0, 0);
+    transition: all linear 0.4s;
+}
+
+
+/* ------------------------ */
+
+@media only screen and (max-width:1050px) {
+    .menubar #txtbtn {
+        font-size: 15px;
+        color: white;
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+    }
+}
+
+@media only screen and (max-width:850px) {
+    .menubar {
+        position: relative;
+        display: flex;
+        font-family: 'Montserrat', sans-serif;
+        width: 100%;
+        margin: 0px auto;
+        background-color: #222;
+        text-align: center;
+        justify-content: space-between;
+        font-size: 12px;
+        height: 40px;
+    }
+    .menubar #txtbtn {
+        font-size: 15px;
+        color: white;
+        position: absolute;
+        bottom: -15px;
+        left: 0;
+    }
+    .menubar .iconadver {
+        display: flex;
+        position: absolute;
+        top: 0.5em;
+        right: 1em;
+        padding: 0px 20px;
+    }
+    .iconadver .elipicon a i {
+        color: rgb(255, 255, 255);
+        line-height: 35px;
+        font-size: 10px;
+        transition: all linear 0.4s;
+    }
+    #menubar-cropdow {
+        position: fixed;
+        display: flex;
+        font-family: 'Montserrat', sans-serif;
+        width: 100%;
+        margin: 0px auto;
+        background-color: #222;
+        text-align: center;
+        justify-content: space-between;
+        font-size: 12px;
+    }
+    nav ul ul {
+        top: 83px;
+    }
+    nav ul li:hover>ul {
+        top: 54px;
+    }
+}
+
+@media only screen and (max-width:950px) {
+    .menubar nav ul {
+        display: none;
+    }
+    .menubar nav {
+        height: 60px;
+    }
+    #menubar-cropdow nav ul {
+        display: none;
+    }
+    #menubar-cropdow nav {
+        height: 60px;
+    }
+    #txtbtn {
+        display: block;
+        justify-content: center;
+        line-height: 65px;
+        padding: 0px 30px;
+    }
+}
+
+
+/* ---------------------- */
+
+.iconadver {
+    display: flex;
+    position: absolute;
+    top: 0.8em;
+    right: 1em;
+    padding: 0px 20px;
+}
+
+.elipicon a {
+    padding: 0px 5px;
+}
+
+.elipicon a i {
+    color: rgb(255, 255, 255);
+    line-height: 35px;
+    font-size: 20px;
+    transition: all linear 0.4s;
+}
+
+.elipicon a i:hover {
+    transform: translateY(-3px);
+}
+
+
+/* -----------Create promotion picture--------------- */
+
+
+/* footer  */
+
+.footer {
+    width: 100%;
+    position: relative;
+    line-height: 35px;
+    display: inline-flex;
+    background-color: rgb(53, 53, 53);
+    font-family: Cambria;
+}
+
+.footer .colfooter {
+    width: 100%;
+    height: 100%;
+}
+
+.colfooter {
+    padding: 20px;
+    text-align: center;
+}
+
+.colfooter span {
+    color: gray;
+}
+
+.colfooter span i {
+    color: rgb(214, 182, 0);
+}
+
+.colfooter p {
+    color: grey;
+    padding: 0%;
+    margin: 0;
+    text-align: left;
+    font-size: 14px;
+    padding: 0px 20px;
+}
+
+.colfooter a i {
+    text-decoration: none;
+    color: rgb(231, 231, 231);
+    font-size: 30px;
+    text-overflow: clip;
+    padding: 2px;
+    line-height: 2em;
+}
+
+.colfooter .icon-footer i {
+    font-size: 18px;
+    transition: all linear 0.3s;
+}
+
+.colfooter .icon-footer {
+    transition: all linear 0.3s;
+    line-height: 20px;
+}
+
+.colfooter .icon-footer :hover {
+    transform: translateY(-5px);
+    transition: all linear 0.3s;
+}
+
+#topbtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    background-color: rgba(201, 7, 7, 0.3);
+    color: white;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 4px;
+    transition: all linear 0.4s;
+}
+
+#topbtn:hover {
+    background-color: rgb(201, 42, 2);
+    transition: all linear 0.4s;
+}
