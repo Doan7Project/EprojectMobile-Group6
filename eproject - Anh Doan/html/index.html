@@ -15,6 +15,11 @@
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/categories.css">
     <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/comparision.css">
+    <link rel="stylesheet" href="../css/register.css">
+    <link rel="stylesheet" href="../css/aboutus.css">
+    <link rel="stylesheet" href="../css/feedback.css">
     <title>index</title>
 </head>
 
@@ -36,18 +41,18 @@
                         <a class="cta" href="" title="Map"><i class="fal fa-map-marked"></i></a>
                     </div>
                     <div class="menuicon">
-                        <a class="cta" href=""><i class="fal fa-bell"></i></a>
+                        <a class="cta" href="#!comparision"><i class="fas fa-plus"></i></a>
                     </div>
                     <!-- <div class="menuicon">
                     <a class="cta" href=""><i id="signin" class="fal fa-user-alt"></i></a>
                 </div> -->
                     <span>|</span>
                     <div class="signup">
-                        <i class="fal fa-user-plus"></i></i><input type="button" class="btn-su-lg" value="Register">
+                        <a class="cta" href="#!register"><i class="fal fa-user-plus"></i></i><input type="button" class="btn-su-lg" value="Register"></a>
                     </div>
                     <span>|</span>
                     <div class="signup">
-                        <i class="fal fa-sign-in-alt"></i><input type="button" class="btn-su-lg" value="Login">
+                        <a class="cta" href="#!login"><i class="fal fa-sign-in-alt"></i><input type="button" class="btn-su-lg" value="Login"></a>
                     </div>
                     <span>|</span>
                     <div class="signup">
@@ -82,11 +87,9 @@
                     </li>
 
                     <li class="drop-down">
-                        <a href="">Brands<i class="fas fa-caret-down"></i></a>
+                        <a href="#!brand">Mobile Brands<i class="fas fa-caret-down"></i></a>
                         <ul class="m-drop-down">
-                            <li>
-                                <a href="#!brand" ng-click="myFiter.brandName = ''">Mobile Brands</a>
-                            </li>
+
                             <li>
                                 <a href="#!samsung" ng-click="myFiter.brandName = 'samsung'">Samsung</a>
                             </li>
@@ -103,9 +106,6 @@
                                 <a href="#!nokia" ng-click="myFiter.brandName = 'nokia'">Nokia</a>
                             </li>
 
-                            <li>
-                                <a href="#!oppo" ng-click="myFiter.brandName = 'oppo'">Oppo</a>
-                            </li>
 
                         </ul>
                     </li>
@@ -131,13 +131,13 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#">Feedback</a>
+                        <a href="#!feedback">Feedback</a>
                     </li>
                     <li>
-                        <a href="#">About Us</a>
+                        <a href="#!aboutus">About Us</a>
                     </li>
                     <li>
-                        <a href="#">Contact Us</a>
+                        <a href="#!contactus">Contact Us</a>
                     </li>
                     <li>
                         <a href="#">FAQ</a>
@@ -176,23 +176,19 @@
                         <a href="#!brand">Mobile Brands<i class="fas fa-caret-down"></i></a>
                         <ul class="m-drop-down">
                             <li>
-                                <a href="#">Samsung</a>
+                                <a href="#!samsung" ng-click="myFiter.brandName = 'samsung'">Samsung</a>
                             </li>
                             <li>
-                                <a href="#">Apple</a>
+                                <a href="#!apple" ng-click="myFiter.brandName = 'apple'">Apple</a>
                             </li>
                             <li>
-                                <a href="#">Google</a>
+                                <a href="#!google" ng-click="myFiter.brandName = 'google'">Google</a>
                             </li>
                             <li>
-                                <a href="#">Motorola</a>
+                                <a href="#!motorola" ng-click="myFiter.brandName = 'motorola'">Motorola</a>
                             </li>
                             <li>
-                                <a href="#">Nokia</a>
-                            </li>
-
-                            <li>
-                                <a href="#">Oppo</a>
+                                <a href="#!nokia" ng-click="myFiter.brandName = 'nokia'">Nokia</a>
                             </li>
 
                         </ul>
@@ -219,17 +215,18 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#">Feedback</a>
+                        <a href="#!feedback">Feedback</a>
                     </li>
                     <li>
-                        <a href="#">About Us</a>
+                        <a href="#!aboutus">About Us</a>
                     </li>
                     <li>
-                        <a href="#">Contact Us</a>
+                        <a href="#!contactus">Contact Us</a>
                     </li>
                     <li>
-                        <a href="#">FAQ</a>
-                    </li>
+                        <li>
+                            <a href="#">FAQ</a>
+                        </li>
                 </ul>
                 <div class="iconadver">
                     <div class="elipicon">
@@ -255,6 +252,7 @@
         </section>
         <hr>
         <button onclick="topFunction()" id="topbtn"><i class="fal fa-arrow-to-top"></i></button>
+
         <footer class="footer">
 
             <div class="colfooter">

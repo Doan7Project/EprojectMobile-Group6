@@ -1,0 +1,88 @@
+<div ng-controller="productCTR" style="text-align: center; margin-top: 30px; position: relative;">
+    <!-- content information of mobile -->
+    <div style="text-align: center; width: 95%; margin: 0 auto;  border-bottom: 1px solid rgb(63, 63, 63); padding: 10px; ">
+        <h4 style=" color: rgb(158, 2, 2); font-family:Verdana, Geneva, Tahoma, sans-serif ">
+            PRODUCT COMPARISION INFORMATION
+        </h4>
+    </div>
+    <table>
+        <tbody>
+            <tr class="menu-compare ">
+                <th>
+                    <span>Features</span>
+                    <div>
+                        <i class="fas fa-caret-down "></i>
+                    </div>
+
+                </th>
+                <th>
+                    <span>Title</span>
+                    <div>
+                        <i class="fas fa-caret-down "></i>
+                    </div>
+                </th>
+                <th>
+                    <span>Memory</span>
+                    <div>
+                        <i class="fas fa-caret-down "></i>
+                    </div>
+                </th>
+                <th>
+                    <span>Camera</span>
+                    <div>
+                        <i class="fas fa-caret-down "></i>
+                    </div>
+                </th>
+                <th>
+                    <span>Processor</span>
+                    <div>
+                        <i class="fas fa-caret-down "></i>
+                    </div>
+                </th>
+                <th>
+                    <span>Battery</span>
+                    <div>
+                        <i class="fas fa-caret-down "></i>
+                    </div>
+                </th>
+                <th>
+                    <span>Action</span>
+                    <div>
+                        <i class="fas fa-caret-down "></i>
+                    </div>
+                </th>
+            </tr>
+        </tbody>
+
+
+        <tr class="table-product " ng-repeat="item in product ">
+            <td class="img-product ">
+                <img src="{{item.pic}} " alt=" ">
+                <span style="text-decoration: line-through; font-style: italic; font-size: smaller; color: brown; ">{{item.price | currency}}</span>
+                <span style="font-size: 18px; font-weight: bold; ">{{item.dis | currency}}</span>
+            </td>
+            <td class="title-product ">
+                <span>{{item.name}}</span>
+            </td>
+            <td class="memory ">
+                <span>{{item.memory}}</span>
+            </td>
+            <td class="camera ">
+                <span>{{item.camera}}</span>
+            </td>
+            <td class="processor ">
+                <span>Apple A13 Bionic chip (7nm+) - Hexa-core (2x2.66 GHz Lightning + 4x1.8 GHz Thunder) Apple CPU, four-core Apple GPU, 8-core Apple NPU 3-gen</span>
+            </td>
+            <td class="battery ">
+                <span>{{item.battery}}</span>
+            </td>
+            <td class="btn-compare ">
+                <button ng-click="remove($index) "><i class="fas fa-window-close "></i></button>
+            </td>
+        </tr>
+
+    </table>
+    <!-- end content product comparision -->
+
+
+</div>

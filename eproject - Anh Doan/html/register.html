@@ -1,0 +1,220 @@
+<style>
+    .regbody {
+        width: 100%;
+        height: 100vh;
+    }
+    
+    .allform {
+        margin: auto;
+        width: 55%;
+        padding: 3%;
+        margin-top: 2em;
+        box-shadow: 2px 2px 4px rgb(3, 64, 100);
+    }
+    
+    .lbtext {
+        text-align: center;
+        color: steelblue;
+        font-weight: bolder;
+        font-size: 30px;
+        margin-bottom: 1em;
+        margin-left: 1em;
+    }
+    
+    .boxlable {
+        margin-top: 1em;
+    }
+    
+    .boxlable .inputbox input {
+        width: 100%;
+        height: 35px;
+        outline: none;
+        border-radius: 0.5em;
+        border: 1px rgb(21, 151, 226) solid;
+        padding: 0px 10px;
+    }
+    
+    .inputbox .cntry {
+        width: 100%;
+        height: 30px;
+        padding: 0px 10px;
+        border: 1px rgb(21, 151, 226) solid;
+    }
+    
+    .inputradio .txtmale {
+        float: left;
+        width: 90px;
+    }
+    
+    .boxbnt {
+        padding: 10px 0px;
+    }
+    
+    .boxbnt .bnt input {
+        width: 100px;
+        height: 34px;
+        border-style: none;
+        cursor: pointer;
+        border-radius: 0.5em;
+    }
+    
+    .boxbnt .bnt #cbregis {
+        background-color: rgb(21, 151, 226);
+        color: white;
+    }
+    
+    .boxbnt .bnt input:hover {
+        box-shadow: 2px 1px 4px gray;
+    }
+    
+    #cbreset {
+        background-color: white;
+        border: 1px solid gray;
+    }
+</style>
+
+
+
+<!------Register form-------->
+<div class="regbody">
+    <div class="allform">
+        <div class="lbtext">
+            <span>Register Form</span>
+        </div>
+        <script>
+            function submitbnt() {
+                var stxtfname = document.getElementById('txtfname').value;
+                var rstxtfname = /[A-Za-z]$/;
+                var stxtlname = document.getElementById('txtlname').value;
+                var rstxtlname = /[A-Za-z]$/;
+                var stxtdate = document.getElementById('txtdate').value;
+                var stxtemail = document.getElementById('txtemail').value;
+                var rstxtemail = /^\w+[@]\w+[.]\w{3}([.]\w{2})?$/;
+                var stxtphone = document.getElementById('txtphone').value;
+                var rstxtphone = /^\d{8,12}$/;
+                if (stxtfname == "") {
+                    alert("The full name cannot left blank!");
+                    document.getElementById('txtfname').focus();
+                    return false;
+                } else if (!rstxtfname.test(stxtfname)) {
+                    alert("The full name is invalid!");
+                    document.getElementById('txtfname').focus();
+                    return false;
+                } else if (stxtlname == "") {
+                    alert("The last name cannot left blank!");
+                    document.getElementById('txtlname').focus();
+                    return false;
+                } else if (!rstxtlname.test(stxtlname)) {
+                    alert("The Last name is invalid!");
+                    document.getElementById('txtlname').focus();
+                    return false;
+                } else if (stxtdate == "") {
+                    alert("The  date cannot left blank!");
+                    document.getElementById('txtdate').focus();
+                    return false;
+                } else if (stxtemail == "") {
+                    alert("The email cannot left blank!");
+                    document.getElementById('txtemail').focus();
+                    return false;
+                } else if (!rstxtemail.test(stxtemail)) {
+                    alert("The email is invalid!");
+                    document.getElementById('txtemail').focus();
+                    return false;
+                } else if (stxtphone == "") {
+                    alert("The phone cannot left blank!");
+                    document.getElementById('txtphone').focus();
+                    return false;
+                } else if (!rstxtphone.test(stxtphone)) {
+                    alert("The email is invalid!");
+                    document.getElementById('txtphone').focus();
+                    return false;
+                } else {
+                    alert("Congatualation" + "\n" +
+                        "Your information has been sent successfully!");
+                }
+
+            }
+        </script>
+
+        <div class="registerform">
+            <form onsubmit="return submitbnt()">
+                <div class="boxlable">
+                    <div class="txtlable">
+                        <span>Full Name: </span>
+                    </div>
+                    <div class="inputbox">
+                        <input type="text" id="txtfname" placeholder="Enter Full Name">
+                    </div>
+                </div>
+                <div class="boxlable">
+                    <div class="txtlable">
+                        <span>Last Name: </span>
+                    </div>
+                    <div class="inputbox">
+                        <input type="text" id="txtlname" placeholder="Enter Last Name">
+                    </div>
+                </div>
+                <div class="boxlable">
+                    <div class="txtlable">
+                        <span>Countries:</span>
+                    </div>
+                    <div class="inputbox">
+                        <select class="cntry" id="country">
+                            <option>Korea</option>
+                            <option>Japan</option>
+                            <option selected>Vietnam</option>
+                            <option>Laos</option>
+                            <option>Cambodia</option>
+                            </select>
+                    </div>
+                </div>
+                <div class="boxlable">
+
+                    <div class="inputradio">
+                        <div class="txtmale">
+                            <input id="gender" type="radio" name="rd" checked onclick="changecolor()">
+                            <span>Male</span>
+                        </div>
+                        <div class="txtfemale">
+                            <input id="gender" class="female" type="radio" name="rd" onclick="changecolor()">
+                            <span>Female</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="boxlable">
+                    <div class="txtlable">
+                        <span>Date:</span>
+                    </div>
+                    <div class="inputbox">
+                        <input type="date" id="txtdate">
+                    </div>
+                </div>
+
+                <div class="boxlable">
+                    <div class="txtlable">
+                        <span>Email:</span>
+                    </div>
+                    <div class="inputbox">
+                        <input type="text" id="txtemail" placeholder="Enter The Email">
+                    </div>
+                </div>
+                <div class="boxlable">
+                    <div class="txtlable">
+                        <span>Phone:</span>
+                    </div>
+                    <div class="inputbox">
+                        <input type="text" id="txtphone" placeholder="Enter The Phone Number">
+                    </div>
+                </div>
+
+                <div class="boxbnt">
+                    <div class="bnt">
+                        <input type="submit" value="Register" id="cbregis" onclick="dieukien()">
+                        <input type="reset" id="cbreset">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

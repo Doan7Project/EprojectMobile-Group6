@@ -1,8 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
-* {
+
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+} */
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 hr {
@@ -223,7 +232,7 @@ i {
 #menubar-cropdow nav ul a {
     text-decoration: none;
     display: block;
-    color: rgb(0, 0, 0);
+    color: rgb(141, 141, 141);
     transition: all 0.4s ease 0s;
     padding: 0px 15px;
     font-size: 15px;
@@ -254,7 +263,7 @@ i {
 }
 
 #menubar-cropdow nav ul li a:hover {
-    color: rgb(143, 143, 143);
+    color: rgb(0, 0, 0);
     transition: all 0.5s ease 0s;
 }
 
@@ -283,17 +292,16 @@ i {
         font-family: 'Montserrat', sans-serif;
         width: 100%;
         margin: 0px auto;
-        background-color: #222;
+        background-color: rgb(204, 0, 68);
         text-align: center;
         justify-content: space-between;
         font-size: 12px;
-        height: 40px;
+        height: 50px;
     }
     .menubar #txtbtn {
-        font-size: 15px;
+        font-size: 17px;
         color: white;
         position: absolute;
-        bottom: -15px;
         left: 0;
     }
     .menubar .iconadver {
@@ -306,7 +314,7 @@ i {
     .iconadver .elipicon a i {
         color: rgb(255, 255, 255);
         line-height: 35px;
-        font-size: 10px;
+        font-size: 17px;
         transition: all linear 0.4s;
     }
     #menubar-cropdow {
@@ -315,10 +323,20 @@ i {
         font-family: 'Montserrat', sans-serif;
         width: 100%;
         margin: 0px auto;
-        background-color: #222;
+        background-color: rgb(255, 255, 255);
         text-align: center;
         justify-content: space-between;
         font-size: 12px;
+        height: 50px;
+    }
+    #menubar-cropdow .elipicon a i {
+        color: rgb(0, 0, 0);
+        transition: all linear 0.4s;
+    }
+    #menubar-cropdow #txtbtn {
+        font-size: 17px;
+        color: rgb(0, 0, 0);
+        position: absolute;
     }
     nav ul ul {
         top: 83px;
@@ -384,9 +402,9 @@ i {
 .footer {
     width: 100%;
     position: relative;
-    line-height: 35px;
+    /* line-height: ; */
     display: inline-flex;
-    background-color: rgb(53, 53, 53);
+    background-color: rgb(0, 145, 170);
     font-family: Cambria;
 }
 
@@ -401,7 +419,7 @@ i {
 }
 
 .colfooter span {
-    color: gray;
+    color: rgb(255, 255, 255);
 }
 
 .colfooter span i {
@@ -409,7 +427,7 @@ i {
 }
 
 .colfooter p {
-    color: grey;
+    color: rgb(255, 255, 255);
     padding: 0%;
     margin: 0;
     text-align: left;

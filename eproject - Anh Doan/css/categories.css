@@ -11,9 +11,8 @@
 .brand-mobile {
     position: relative;
     display: flex;
-    width: 100%;
+    width: 95%;
     margin: 0 auto;
-    width: 100%;
     border-top: 1px solid rgb(198, 199, 199, 0.3);
     border-bottom: 1px solid rgb(198, 199, 199, 0.3);
     padding: 20px;
@@ -128,59 +127,64 @@
 }
 
 
-/* Control table */
-
-.control-left {
-    box-shadow: 0px 2px 3px rgb(221, 221, 221);
-    position: relative;
-    height: 100%;
-    width: 20%;
-    border: 1px solid rgb(247, 247, 247);
-}
-
-.control-table {
-    padding: 20px 20px 2px 20px;
-    display: block;
-    font-size: 12px;
-    align-items: center;
-}
-
-.control-table div {
-    padding-top: 5px;
-}
-
-.control-table div label {
-    width: 100%;
-    font-size: 14px;
-    border-bottom: 1px solid rgb(207, 207, 207);
-    /* background-color: rgba(0, 207, 173); */
-    color: rgb(0, 0, 0);
-    font-family: serif;
-    font-weight: bold;
-}
-
-#unselect {
-    display: none;
-}
-
-
 /* right product */
 
 .brand-name {
-    width: 100%;
+    width: 95%;
     height: 40px;
-    margin: 0 15px 0 10px;
+    margin: 0px auto;
     border-bottom: 1px solid rgb(199, 199, 199);
+    display: flex;
+    position: relative;
+}
+
+.comp-lable {
+    position: absolute;
+    right: 0;
+    display: flex;
+    padding: 0px 5px;
+    text-align: right;
+    border: 1px solid rgb(226, 226, 226);
+    justify-content: center;
+    justify-items: center;
+    vertical-align: middle;
+    transition: all ease 0.3s;
+}
+
+.comp-lable:hover {
+    background-color: rgb(0, 121, 219);
+    color: white;
+    transition: all ease 0.3s;
+}
+
+.btnCounter a button:hover {
+    color: white;
+    transition: all ease 0.3s;
+}
+
+.btnCounter a button {
+    text-align: right;
+    width: 120px;
+    text-align: center;
+    border: none;
+    height: 30px;
+    background-color: transparent;
+}
+
+.numCounter {
+    padding: 3px 5px;
 }
 
 .right-section {
-    width: 80%;
+    width: 100%;
 }
 
 .brand-product {
     padding: 10px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
+    grid-template-columns: repeat(auto-fit, 260px);
+    justify-content: center;
 }
 
 
@@ -208,7 +212,7 @@
 }
 
 .product-content {
-    border: 1px solid rgb(18, 194, 164);
+    border: 1px solid rgb(146, 146, 146);
 }
 
 .product-btn {
@@ -272,7 +276,7 @@
     text-align: center;
     font-family: serif;
     color: white;
-    background-color: rgb(13, 151, 110);
+    background-color: rgb(218, 42, 86);
     justify-content: center;
     align-items: center;
     vertical-align: middle;

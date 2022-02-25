@@ -1,0 +1,62 @@
+table {
+    width: 95%;
+    margin: 0px auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+table tr th {
+    border: none;
+    height: 80px;
+    border-bottom: none;
+}
+
+table tr td {
+    border: 2px solid rgba(83, 83, 83, 0.5);
+    word-break: break-all;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.img-product {
+    width: 40px;
+    text-align: center;
+}
+
+.title-product {
+    width: 2%;
+    writing-mode: vertical-rl;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.img-product img {
+    width: 200px;
+    text-align: center;
+}
+
+.memory {
+    width: 200px;
+}
+
+.camera {
+    width: 200px;
+}
+
+.processor {
+    width: 300px;
+}
+
+.battery {
+    width: 200px;
+}
+
+.btn-compare button {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: red;
+}
+
+.btn-compare button i {
+    font-size: 30px;
+}

@@ -7,9 +7,7 @@
             <span class="txt">Please choose your model for repair</span>
 
         </div>
-
         <!-- control brand -->
-
         <div class="brand-mobile">
             <div class="mobile-detail">
                 <button class="btn active" id="allSearch" ng-click="myFiter.brandName = ''">All</button>
@@ -18,7 +16,7 @@
                 <button class="btn" id="googleSearch" ng-click="myFiter.brandName = 'google'">Google</button>
                 <button class="btn" id="motorolaSearch" ng-click="myFiter.brandName = 'motorola'">Motorola</button>
                 <button class="btn" id="nokiaSearch" ng-click="myFiter.brandName = 'nokia'">Nokia</button>
-                <button class="btn" id="oppoSearch" ng-click="myFiter.brandName = 'oppo'">Oppo</button>
+
             </div>
             <div class="fcsearch">
                 <input class="txtsearch" type="search" placeholder="Search for products" ng-model="searchInfo">
@@ -31,77 +29,6 @@
     </div>
 
     <section class="body-contents">
-        <!-- begin left section -->
-        <section class="control-left">
-            <div class="control-table">
-                <form action="">
-                    <div>
-                        <label for="">Seach for brands</label><br>
-                    </div>
-                    <div>
-                        <input id="checkall" onchange="change()" rel="''" class="selectAll" type="checkbox" name="all" ng-model="all">
-                        <span id="selectall">Select All</span>
-                        <span id="unselect">Deselect All</span>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="phone" value="iphone" ng-checked="all" rel="iphone">
-                        <span>Apple(iphone)</span>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="phone" value="samsung" ng-checked="all" rel="samsung">
-                        <span>Samsung</span>
-
-                    </div>
-                    <div>
-                        <input type="checkbox" name="phone" value="goolge" ng-checked="all" rel="google">
-                        <span>Google</span>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="phone" value="nokia" ng-checked="all" rel="nokia">
-                        <span>Nokia</span>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="phone" value="motorola" ng-checked="all" rel="motorola">
-                        <span>Motorola</span>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="phone" value="oppo" ng-checked="all" rel="oppo">
-                        <span>Oppo</span>
-                    </div>
-
-                    <div>
-                        <label for="">Seach for Price</label><br>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="1" id="">
-                        <span>Under 200$</span>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="2" id="">
-                        <span>From 200$ to 300%</span>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="3" id="">
-                        <span> From 400$ to 600%</span>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="4" id="">
-                        <span>From 700$ to 900%</span>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="5" id="">
-                        <span>rom 1000$ to 1500% </span>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="6" id="">
-                        <span>Upto 2000%</span>
-                    </div>
-                </form>
-
-                <br>
-            </div>
-        </section>
-        <!-- end left section -->
 
         <!-- begin right section  -->
         <section class="right-section">
@@ -109,7 +36,19 @@
             <section class="iphone-brand">
                 <div class="brand-name">
                     <h5>IPHONE BRAND</h5>
+                    <div class="comp-lable">
+                        <div class="numCounter">
+                            <span id='counter-label' value=""></span>
+                        </div>
+                        <div id="btncounter" class="btnCounter">
+                            <a href="#!comparision"><button>COMPARE</button>
+                        </a>
+                        </div>
+                    </div>
+
+
                 </div>
+
                 <div class="brand-product">
                     <!-- begin product -->
                     <div class="product" ng-repeat="item in listitems | filter:searchInfo | filter:myFiter">
@@ -131,10 +70,10 @@
 
                                 <div class="price">
                                     <div>
-                                        <p class="price-discount">${{item.discount}}</p>
+                                        <p class="price-discount">${{item.price-(item.price*((item.dispercent)/100))}}</p>
                                     </div>
                                     <div>
-                                        <p class="price-real">(${{item.price}})</p>
+                                        <p style="color: rgb(61, 54, 54);" class="price-real">(${{item.price}})</p>
                                     </div>
                                 </div>
                                 <div class="stars">
@@ -147,10 +86,10 @@
 
                             </div>
                             <div class="gift-info">
-                                <p class="sm-gift-info">{{item.gift}}</p>
+                                <p class="sm-gift-info">Discount {{item.dispercent}}%</p>
                             </div>
                             <div class="compare">
-                                <a href="product.html" target="new"><button>Compare<span><i class="fal fa-compress-alt"></i></span></button></a>
+                                <a onclick="incrementClick()"><button  ng-click="compareProduce($index)">Compare<span><i class="fas fa-plus"></i></span></button></a>
                             </div>
 
                         </div>
@@ -285,21 +224,17 @@
 
                                 <div class="small-img-group">
                                     <div class="small-img-col">
-                                        <img src="../images/iphone11.png" width="100%" class="small-img" alt="">
+                                        <img src="{{pic1}}" width="100%" class="small-img" alt="">
                                     </div>
                                     <div class="small-img-col">
-                                        <img src="../images/iphone1fa-stack-2x.png" width="100%" class="small-img" alt="">
+                                        <img src="{{pic2}}" width="100%" class="small-img" alt="">
                                     </div>
                                     <div class="small-img-col">
-                                        <img src="../images/iphone13.png" width="100%" class="small-img" alt="">
+                                        <img src="{{pic3}}" width="100%" class="small-img" alt="">
                                     </div>
                                     <div class="small-img-col">
-                                        <img src="../images/iphone13pro.png" width="100%" class="small-img" alt="">
+                                        <img src="{{pic4}}" width="100%" class="small-img" alt="">
                                     </div>
-                                    <div class="small-img-col">
-                                        <img src="../images/iphone12.png" width="100%" class="small-img" alt="">
-                                    </div>
-
                                 </div>
 
                             </div>
@@ -335,26 +270,6 @@
 
                     </section>
 
-
-                    <script>
-                        var MainImg = document.getElementById('mainImg');
-                        var smallImg = document.getElementsByClassName('small-img');
-                        smallImg[0].onclick = function() {
-                            MainImg.src = smallImg[0].src;
-                        }
-                        smallImg[1].onclick = function() {
-                            MainImg.src = smallImg[1].src;
-                        }
-                        smallImg[2].onclick = function() {
-                            MainImg.src = smallImg[2].src;
-                        }
-                        smallImg[3].onclick = function() {
-                            MainImg.src = smallImg[3].src;
-                        }
-                        smallImg[4].onclick = function() {
-                            MainImg.src = smallImg[4].src;
-                        }
-                    </script>
                 </div>
 
                 <div class="modal-footer">
@@ -367,4 +282,13 @@
     </div>
 
     <script>
+        var counterVal = 0;
+
+        function incrementClick() {
+            updateDisplay(++counterVal);
+        }
+
+        function updateDisplay(val) {
+            document.getElementById("counter-label").innerHTML = val;
+        }
     </script>

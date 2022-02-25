@@ -8,6 +8,24 @@ app.config(function($routeProvider) {
         .when("/brand", {
             templateUrl: "categories.html"
         })
+        .when("/login", {
+            templateUrl: "login.html"
+        })
+        .when("/comparision", {
+            templateUrl: "comparision.html"
+        })
+        .when("/register", {
+            templateUrl: "register.html"
+        })
+        .when("/contactus", {
+            templateUrl: "contactus.html"
+        })
+        .when("/aboutus", {
+            templateUrl: "aboutus.html"
+        })
+        .when("/feedback", {
+            templateUrl: "feedback.html"
+        })
         .when("/apple", {
             templateUrl: "categories.html"
         })
@@ -23,9 +41,7 @@ app.config(function($routeProvider) {
         .when("/nokia", {
             templateUrl: "categories.html"
         })
-        .when("/oppo", {
-            templateUrl: "categories.html"
-        })
+
 
 });
 
@@ -61,19 +77,31 @@ app.run(function($rootScope, $http) {
         $rootScope.listitems = response.data.brands;
         console.log($rootScope.listitems);
     });
+
+    $http.get("../datajson/data.json").then(function(response) {
+        $rootScope.product = response.data.brands;
+        console.log($rootScope.product);
+
+        $rootScope.product = [];
+    });
+
 });
 
-app.controller("myCtrl", function($scope) {
+app.controller("myCtrl", function($scope, $rootScope) {
     $scope.view = function(ID) {
         // alert(ID);
         let phone = $scope.listitems.find(el => el.ID == ID);
         // console.log(phone);
         $scope.pic = phone.pic;
+        $scope.pic1 = phone.pic1;
+        $scope.pic2 = phone.pic2;
+        $scope.pic3 = phone.pic3;
+        $scope.pic4 = phone.pic4;
         $scope.brandName = phone.brandName;
         $scope.brandID = phone.brandID;
         $scope.name = phone.name;
         $scope.price = phone.price;
-        $scope.discount = phone.discount;
+        $scope.discount = phone.price - (phone.price * (phone.dispercent / 100));
         $scope.body = phone.body;
         $scope.screen = phone.screen;
         $scope.chipset = phone.chipset;
@@ -87,11 +115,42 @@ app.controller("myCtrl", function($scope) {
         $('#myModal').modal('show');
     }
 
+    $scope.compareProduce = function(ID) {
+        let items = $rootScope.listitems[ID];
+        var newEle = {
+
+            "pic": items.pic,
+            "name": items.name,
+            "price": items.price,
+            "memory": items.memory,
+            "camera": items.camera,
+            "battery": items.battery,
+            "dis": items.price - (items.price * ((items.dispercent) / 100))
+
+        }
+
+        $rootScope.product.push(newEle);
+        console.log(newEle);
+
+
+
+
+    };
+
 
 });
 
 // compare product
+app.controller("productCTR", function($scope) {
 
+
+    $scope.remove = function(index) {
+
+        $scope.product.splice(index, 1);
+
+    }
+
+})
 
 function selectbox() {
 
@@ -109,20 +168,22 @@ function selectbox() {
     }
 
 }
-//back top
-var mybutton = document.getElementById("topbtn");
 
-// When the user scrolls down 20px from the top of the document, show the button
-// window.onscroll = function() { scrollFunction() };
-
-// function scrollFunction() {
-//     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-//         mybutton.style.display = "block";
-//         mybutton.style.transition = "all linear 0.4s";
-//     } else {
-//         mybutton.style.display = "none";
-//         mybutton.style.transition = "all linear 0.4s";
-//     }
-// }
-
-// When the user clicks on the button, scroll to the top of the document
+{
+    var smallImg = document.getElementsByClassName('small-img');
+    smallImg[0].onclick = function() {
+        MainImg.src = smallImg[0].src;
+    }
+    smallImg[1].onclick = function() {
+        MainImg.src = smallImg[1].src;
+    }
+    smallImg[2].onclick = function() {
+        MainImg.src = smallImg[2].src;
+    }
+    smallImg[3].onclick = function() {
+        MainImg.src = smallImg[3].src;
+    }
+    smallImg[4].onclick = function() {
+        MainImg.src = smallImg[4].src;
+    }
+}
