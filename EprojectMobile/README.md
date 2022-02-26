@@ -15,6 +15,6 @@ Project title: CeLL Infor Mobile
      Lê Duy Tú - Student1341518
      
      Nguyễn Thị Út Hương - Student1318426
-============================
- Our site is ready to be published at https://doanftpaptech.github.io/EprojectMobile/html/index.html
+
+ Our site is ready to be published at https://doanftpaptech.github.io/EprojectMobile-Group6/html/index.html
 
