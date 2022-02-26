@@ -1,2 +1,2 @@
 # eproject---Anh-Doan
-https://doanftpaptech.github.io/eproject---Anh-Doan/html/index.html
+ Our site is ready to be published at https://doanftpaptech.github.io/EprojectMobile/html/index.html
