@@ -437,3 +437,10 @@
 .product:hover .compare {
     opacity: 1;
 }
+
+
+/* show menubar reponsive */
+
+.show-active {
+    display: block;
+}

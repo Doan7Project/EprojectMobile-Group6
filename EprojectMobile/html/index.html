@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="../css/register.css">
     <link rel="stylesheet" href="../css/aboutus.css">
     <link rel="stylesheet" href="../css/feedback.css">
+    <link rel="stylesheet" href="../css/contactus.css">
     <title>index</title>
 </head>
 
@@ -79,7 +80,7 @@
             <nav>
                 <input type="checkbox" id="checkbx">
                 <label for="checkbx">
-                    <span id="txtbtn" class="fas fa-bars"></span>
+                    <span onclick="btnRespronsive()" id="txtbtn" class="fas fa-bars"></span>
                         </label>
                 <ul>
                     <li>
@@ -165,7 +166,7 @@
             <nav>
                 <input type="checkbox" id="checkbx">
                 <label for="checkbx">
-                    <span id="txtbtn" class="fas fa-bars"></span>
+                    <span onclick="btnRespronsive()" id="txtbtn" class="fas fa-bars"></span>
                         </label>
                 <ul>
                     <li>
@@ -244,6 +245,65 @@
                 </div>
             </nav>
 
+        </header>
+        <!-- menubar responsive -->
+        <header>
+            <div class="menubar-responsive" id="table-menubar-responsive">
+                <ul class="element-show">
+                    <li>
+                        <a href="#">HOME</a>
+                    </li>
+                    <li class="drp-btn" onclick="functionBrand()">
+                        <a href="#!brand" class="brnmobile">Brand Mobile <i class="fas fa-caret-down"></i></a>
+                        <ul id="brandMobile">
+                            <li>
+                                <a href="#!samsung" ng-click="myFiter.brandName = 'samsung'">Samsung</a>
+                            </li>
+                            <li>
+                                <a href="#!apple" ng-click="myFiter.brandName = 'apple'">Apple</a>
+                            </li>
+                            <li>
+                                <a href="#!google" ng-click="myFiter.brandName = 'google'">Google</a>
+                            </li>
+                            <li>
+                                <a href="#!motorola" ng-click="myFiter.brandName = 'motorola'">Motorola</a>
+                            </li>
+                            <li>
+                                <a href="#!nokia" ng-click="myFiter.brandName = 'nokia'">Nokia</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li onclick="functionSer()">
+                        <a class="service">Service <i class="fas fa-caret-down"></i></a>
+                        <ul id="brandservice">
+                            <li class="brname">
+                                <a href="">Viet Nam</a>
+                            </li>
+                            <li class="brname">
+                                <a href="">Japan</a>
+                            </li>
+                            <li class="brname">
+                                <a href="">Usa</a>
+                            </li>
+                            <li class="brname">
+                                <a href="">Korea</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#!aboutus">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#!contactus">Contact Us</a>
+                    </li>
+                    <li>
+                        <a href="#">FAQ</a>
+                    </li>
+                </ul>
+                <a href="" class="close">
+                    <i onclick="closemenu()" class="fas fa-times"></i>
+                </a>
+            </div>
 
         </header>
         <!-- view single page -->

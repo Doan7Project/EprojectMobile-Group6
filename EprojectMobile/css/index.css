@@ -152,6 +152,7 @@ hr {
     position: absolute;
     bottom: -15px;
     left: 0;
+    cursor: pointer;
 }
 
 nav ul {
@@ -479,4 +480,71 @@ i {
 #topbtn:hover {
     background-color: rgb(201, 42, 2);
     transition: all linear 0.4s;
+}
+
+
+/* manubar responsive */
+
+.menubar-responsive {
+    display: none;
+    background-color: rgb(39, 39, 39);
+    position: relative;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.menubar-responsive ul li {
+    list-style: none;
+    padding: 5px;
+    width: 90%;
+}
+
+#brandMobile {
+    display: none;
+}
+
+.menubar-responsive ul li a {
+    background-color: rgb(43, 43, 43, 0.3);
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: rgb(145, 145, 145);
+    transition: all ease 0.3s;
+    cursor: pointer;
+}
+
+.menubar-responsive ul li a button {
+    cursor: pointer;
+}
+
+.menubar-responsive ul li a:hover {
+    background-color: rgb(43, 43, 43);
+    transition: all ease 0.3s;
+    color: white;
+}
+
+.close i {
+    color: rgb(255, 255, 255);
+    padding: 20px;
+}
+
+#brandservice {
+    display: none;
+}
+
+#brandMobile.newshow {
+    display: block;
+}
+
+#brandservice.show {
+    display: block;
+}
+
+
+/* menubar show reponsive */
+
+#table-menubar-responsive.show-active {
+    display: block;
+    z-index: 1;
+    position: absolute;
+    width: 100%;
 }

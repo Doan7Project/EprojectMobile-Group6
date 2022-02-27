@@ -187,3 +187,30 @@ function selectbox() {
         MainImg.src = smallImg[4].src;
     }
 }
+
+// menubar responsive
+function btnRespronsive() {
+
+    var munebars = document.getElementById('table-menubar-responsive');
+    munebars.classList.toggle("show-active");
+}
+
+//brand function
+function functionBrand() {
+    var element = document.getElementById("brandMobile");
+    element.classList.toggle('newshow');
+
+}
+
+//service function
+function functionSer() {
+    var element = document.getElementById("brandservice");
+    element.classList.toggle('show');
+
+}
+// close menubar reponsive
+function closemenu() {
+    var reomoveN = document.getElementById('table-menubar-responsive');
+    reomoveN.classList.remove("show-active");
+    console.log("hello");
+}
