@@ -26,13 +26,13 @@
 
 .loginbody {
     width: 90%;
-    margin: 0px auto;
-    padding: 60px 0px;
+    margin: 20px auto;
+    /* padding: 60px 0px; */
 }
 
-.btn-icon {
-    width: 25px;
-    height: 25px;
+.btn-icons {
+    width: 30px;
+    height: 30px;
     font-size: 12px;
     border-radius: 50%;
     outline: none;
@@ -42,7 +42,7 @@
     transition: all ease 0.3s;
 }
 
-.btn-icon:hover {
+.btn-icons:hover {
     transform: translateY(-3px);
     transition: all ease 0.3s;
     background-color: rgb(182, 15, 79);
