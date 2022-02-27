@@ -18,4 +18,5 @@ Project title: CeLL Infor Mobile
 
 
  Our site is ready to be published at https://doanftpaptech.github.io/EprojectMobile-Group6/EprojectMobile/html/index.html
+ Document of CELLINFO MOBILE Eproject at https://doanftpaptech.github.io/EprojectMobile-Group6/EprojectMobile/Document/CELLINFO_PROJECT.pdf
 
