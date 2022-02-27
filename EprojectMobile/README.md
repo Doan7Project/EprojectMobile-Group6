@@ -17,6 +17,6 @@ Project title: CeLL Infor Mobile
      Nguyễn Thị Út Hương - Student1318426
 
 
- Our site is ready to be published at https://doanftpaptech.github.io/EprojectMobile-Group6/EprojectMobile/html/index.html
- Document of CELLINFO MOBILE Eproject at https://doanftpaptech.github.io/EprojectMobile-Group6/EprojectMobile/Document/CELLINFO_PROJECT.pdf
+ Our site is ready to be published at https://doanftpaptech.github.io/EprojectMobile-Group6/EprojectMobile/tree/master/Document
+ CELLINFO MOBILE Eproject at https://doanftpaptech.github.io/EprojectMobile-Group6/EprojectMobile/Document/CELLINFO_PROJECT.pdf
 
