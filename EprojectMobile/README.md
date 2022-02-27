@@ -19,8 +19,9 @@ Project title: CeLL Infor Mobile
 
  Our site is ready to be published at https://doanftpaptech.github.io/EprojectMobile-Group6/EprojectMobile/tree/master/Document
  github report link: https://doanftpaptech.github.io/EprojectMobile-Group6/EprojectMobile/Document/CELLINFO_PROJECT.pdf
- Guiding video link: https://doanftpaptech.github.io/EprojectMobile-Group6/EprojectMobile/tree/master/Video
  
- ---We'd to be excited for your having a look our project---
+ -- We have a video link for guiding the project, especially you can take understand our project more clearly and easily: https://youtu.be/VIqnN8HpOtw
+ 
+ ---We'd to be excited for your having a look at our project---
  ---Thank you very much---
 
